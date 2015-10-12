@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="../../favicon.ico">
+		<link href="main.css" rel="stylesheet">
+
+		<title>Starter Template for Bootstrap</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	  <![endif]-->
+	  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+
+	</head>
+
+	<body>
+
+		<h3>一个只支持乘法的计算器<small>懒得增加其他功能</small></h3>
+		<br>
+		<br>
+
+		<form method="POST">
+			<div class="form-group">
+				<input type="text" class="form-control" name="number1" placeholder="Number1">
+			</div>
+
+			<div class="form-group">
+				<input type="text" class="form-control" name="number2" placeholder="Number2">
+			</div>
+			<button type="submit" class="btn btn-success">Submit</button>
+		</form>
+		<br>
+
+		<div class="alert alert-danger" role="alert">最好别玩DOS攻击等</div>
+		<br>
+		<br>
+		<p class="text-danger"><strong>话说有谁想去<a href="http://tieba.baidu.com/f?ie=utf-8&kw=%E5%B0%8F%E7%99%BD%E8%B5%84%E6%BA%90%E7%BD%91" class="btn btn-warning btn-xs" role="button">小白资源网吧</a>看看？</strong></p>
+		
+
+		<!-- Bootstrap core JavaScript
+	  ================================================== -->
+	  <!-- Placed at the end of the document so the pages load faster -->
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	  <script src="../../dist/js/bootstrap.min.js"></script>
+	  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	  <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+	</body>
+</html>
+
+

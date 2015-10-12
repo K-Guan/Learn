@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="description" content="">
+		<meta name="author" content="Kevin Guan">
+
+		<title>Kevin's blog</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+		<!-- Bootstrap core JavaScript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+		<!-- use style css file -->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+
+	</head>
+
+
+	<body>
+
+		<div class="container">
+			<form class="form-signin" method="POST">
+				<h2 class="form-signin-heading">Please login</h2>
+
+				<label for="inputEmail" class="sr-only">User name</label>
+				<input type="text" name="username" id="inputName" class="form-control" placeholder="User name" required autofocus>
+
+				<label for="inputPassword" class="sr-only">Password</label>
+				<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+
+				<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+			</form>
+		</div> <!-- /container -->
+
+
+	</body>
+
+
+</html>
