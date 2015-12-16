@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+        <script>
+$(document).ready(function() {
+    $('#test').bind('click', function() {
+        alert('Hello');
+        var check = confirm('Do you want to click this again?');
+        if (check !== true) {
+            document.getElementById('test').innerHTML = "Now you can't click me again";
+            $('#test').unbind('click');
+        }
+    });
+})
+        </script>
+
+    </head>
+
+    <body>
+        <p id="test">Click me, I'll show you something</p>
+    </body>
+
+</html>
