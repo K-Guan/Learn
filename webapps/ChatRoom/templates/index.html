@@ -85,22 +85,16 @@ $(document).ready(function(){
         </div>
         <!-- Nickname ask dialog end -->
 
+        <div id="messages"></div>
+
+        <form id="chat" method="POST" action='#'>
+            <input type="text" name="broadcast_data" id="message" placeholder="Message">
+            <input type="submit" value="Broadcast">
+        </form>
+
         <script>
 $('#askNickname').modal()
         </script>
 
-
     </body>
-</html>
-
-</head>
-<body>
-    <div id="messages"></div>
-
-    <form id="chat" method="POST" action='#'>
-        <input type="text" name="broadcast_data" id="message" placeholder="Message">
-        <input type="submit" value="Broadcast">
-    </form>
-
-</body>
 </html>
