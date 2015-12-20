@@ -1,7 +1,4 @@
 #!/usr/bin/env python
-import time
-import eventlet
-from threading import Thread
 from flask import Flask, render_template, session, request
 from flask_socketio import SocketIO, emit, join_room, leave_room, \
     close_room, rooms, disconnect
@@ -9,7 +6,6 @@ from flask_socketio import SocketIO, emit, join_room, leave_room, \
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app, async_mode='eventlet')
-thread = None
 
 
 @app.route('/')
