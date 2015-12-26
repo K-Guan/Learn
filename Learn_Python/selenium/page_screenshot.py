@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from selenium import webdriver
 
-driver = webdriver.PhantomJS()
+driver = webdriver.PhantomJS(service_log_path=os.path.devnull)
 driver.maximize_window()
 
 driver.get(input('Link: '))

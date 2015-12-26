@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
+import os
 from selenium import webdriver
 
-driver = webdriver.PhantomJS()
+driver = webdriver.PhantomJS(service_log_path=os.path.devnull)
 driver.get('https://www.python.org/dev/peps/pep-0020/')
 
 print(driver.title)
