@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="">
+        <meta name="author" content="Kevin Guan">
+
+        <title>Zalgo Text is crazy!!! Do you wish that they can become normal?</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+        <!-- Bootstrap core JavaScript-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+        <!-- If need use some css file -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+        <script>
+$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+
+$(function() {
+    $('#input').bind('keyup', function() {
+        $.getJSON($SCRIPT_ROOT + '/_dezalgo', {
+            text: $('#input').val(),
+        }, function(data) {
+            $("#output").val(data.result);
+        });
+        return false;
+    });
+});
+        </script>
+
+    </head>
+    <body>
+
+        <h3>Type zalgo text below, and they'll all become clear text AS WE EXPECTED</h3>
+
+
+        <form>
+            <textarea class="form-control" id="input" rows="8" placeholder="Please enter your input zalgo text here"></textarea>
+        </form>
+
+        <hr />
+
+        <textarea class="form-control" id="output" rows="8" placeholder="The output goes here" readonly></textarea>
+
+    </body>
+</html>
