@@ -28,7 +28,7 @@
 $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
 
 $(function() {
-    $('#input').bind('keyup', function() {
+    $('#input').bind('input', function() {
         $.getJSON($SCRIPT_ROOT + '/_dezalgo', {
             text: $('#input').val(),
         }, function(data) {
