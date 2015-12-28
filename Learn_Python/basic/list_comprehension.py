@@ -1,8 +1,14 @@
 #!/usr/bin/env python3
-a = []
+"""
+A simple script which shows how useful of Python list comprehension!
+"""
+
+# create a list in 'normal way'
+foo = []
 for i in ('10', '20'):
-    a.append(int(i))
+    foo.append(int(i))
 
-b = [int(i) for i in ('10', '20')]
+# use list comprehension, clear and simple
+bar = [int(i) for i in ('10', '20')]
 
-print(a, b)
+print(foo, bar)
