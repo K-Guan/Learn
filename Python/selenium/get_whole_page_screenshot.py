@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 from selenium import webdriver
 
 driver = webdriver.PhantomJS(service_log_path=os.path.devnull)
@@ -11,3 +12,4 @@ for i in [i/100 for i in range(10, 999)]:
                           .format(i))
 
 driver.save_screenshot(input('File name: '))
+driver.close()
