@@ -9,10 +9,8 @@ def url_generater(path):
     song = os.path.realpath(path).split('/')
 
     name = os.path.splitext(song[-1])[0]
-    if '. ' in name:
-        name = name.split('. ')[-1]
+    name = re.sub(r'^\d+\.? |^\(.+?\)| ', '', name).lower()
 
-    name = name.lower().replace(' ', '')
 
     artist = song[5].lower().replace(' ', '')
     return 'http://www.azlyrics.com/lyrics/{}/{}.html'.format(artist, name)
