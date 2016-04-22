@@ -10,10 +10,8 @@ def url_generater(path):
     song = os.path.realpath(path).split('/')
 
     name = os.path.splitext(song[-1])[0]
-    name = re.sub(r'^\d+\.? ', '', name)
-    name = re.sub(r'\(.+?\)| ', '', name).lower()
-
-    print(name)
+    name = re.sub(r'\(.+?\)', '', name)
+    name = ''.join(re.findall(r'\w', name)).lower()
 
 
     artist = song[5].lower().replace(' ', '')
