@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+import re
+import os
+
+for i in os.listdir():
+    os.rename(i, re.sub('^\d+\.? ', '', i))
