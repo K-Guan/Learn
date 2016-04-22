@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import re
 import os
 import sys
 import requests
@@ -9,7 +10,10 @@ def url_generater(path):
     song = os.path.realpath(path).split('/')
 
     name = os.path.splitext(song[-1])[0]
-    name = re.sub(r'^\d+\.? |^\(.+?\)| ', '', name).lower()
+    name = re.sub(r'^\d+\.? ', '', name)
+    name = re.sub(r'\(.+?\)| ', '', name).lower()
+
+    print(name)
 
 
     artist = song[5].lower().replace(' ', '')
