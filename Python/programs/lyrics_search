@@ -25,4 +25,10 @@ r = requests.get(url_generater(sys.argv[1]), headers=headers)
 
 
 soup = BeautifulSoup(r.text, "html.parser")
-print(soup.find('span', {'id': 'cf_text_top'}).find_next('div').text.strip())
+
+try:
+    print(soup.find('span', {'id': 'cf_text_top'}).find_next('div').text.strip())
+except AttributeError:
+    print("Sorry, we can't find the lyric you're looking for.",
+          "Maybe it's a bug of the program or the lyric doesn't exist.")
+    raise SystemExit(1)
