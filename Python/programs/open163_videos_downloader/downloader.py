@@ -60,7 +60,7 @@ def file_moving(number, path_from, path_to):
 
 
 logging.basicConfig(format='%(asctime)s -- %(message)s -- %(levelname)s',
-                    datefmt='%c', level=logging.DEBUG)
+                    datefmt='%c', level=logging.INFO)
 
 directory = input('Please enter the directory to put the videos: ')
 video_list = input('Please enter the URL of the videos list: ')
@@ -80,9 +80,10 @@ options = webdriver.ChromeOptions()
 options.add_argument("load-extension=/home/kevin/Learn/Python/programs/"
                      "open163_videos_downloader/VideosDownloader")
 
+driver = webdriver.Chrome(chrome_options=options)
+
 for video in videos:
     while True:
-        driver = webdriver.Chrome(chrome_options=options)
         driver.get(video)
         logging.info('Downloading the #{} video'.format(number))
 
