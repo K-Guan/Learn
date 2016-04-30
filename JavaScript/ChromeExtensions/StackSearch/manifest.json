@@ -2,7 +2,7 @@
     "background": {
         "scripts": [ "scripts/main.js" ]
     },
-    "description": "Type \"so\" in the omnibar and press Tab, then \"site:stackoverflow.com\" will be also added before the stuff you want search in Google",
+    "description": "Type \"so\" in the omnibar and press Tab, then \"site:stackoverflow.com\" will be added before the stuff you're going to search on Google",
     "icons": {
         "128": "icon.png",
         "16": "icon.png",
