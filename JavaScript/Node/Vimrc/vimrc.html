@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/.vimrc.html</title>
+<meta name="Generator" content="Vim/7.4">
+<meta name="plugin-version" content="vim7.4_v2">
+<meta name="syntax" content="vim">
+<meta name="settings" content="use_css,no_foldcolumn,expand_tabs,prevent_copy=">
+<meta name="colorscheme" content="molokai">
+<style type="text/css">
+<!--
+pre { font-family: monospace; color: #d0d0d0; background-color: #121212; }
+body { font-family: monospace; color: #d0d0d0; background-color: #121212; }
+* { font-size: 1em; }
+.Operator { color: #d7005f; }
+.Normal { color: #d0d0d0; background-color: #121212; padding-bottom: 1px; }
+.String { color: #afaf87; }
+.Number { color: #af5fff; }
+.Function { color: #87ff00; }
+.level15c { color: #ff6060; }
+.Delimiter { color: #626262; }
+.level16c { color: #af5f00; }
+.Comment { color: #5f5f5f; }
+.Special { color: #5fd7ff; }
+.Identifier { color: #ff8700; }
+.Statement { color: #d7005f; font-weight: bold; }
+.PreProc { color: #87ff00; }
+.Type { color: #5fd7ff; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="Comment">&quot; must be first, changes behaviour of other settings</span>
+<span class="Statement">set</span> <span class="PreProc">nocompatible</span>
+
+<span class="Comment">&quot; 256 colors</span>
+<span class="Statement">set</span> <span class="PreProc">t_Co</span>=256
+
+<span class="Comment">&quot; sane text files</span>
+<span class="Statement">set</span> <span class="PreProc">fileformat</span>=unix
+<span class="Statement">set</span> <span class="PreProc">encoding</span>=utf-8
+
+<span class="Comment">&quot; sane tabs</span>
+<span class="Statement">set</span> <span class="PreProc">tabstop</span>=4
+<span class="Statement">set</span> <span class="PreProc">shiftwidth</span>=4
+<span class="Statement">set</span> <span class="PreProc">softtabstop</span>=4
+
+<span class="Comment">&quot; convert all typed tabs to spaces</span>
+<span class="Statement">set</span> <span class="PreProc">expandtab</span>
+
+<span class="Comment">&quot; set the background color</span>
+<span class="Statement">set</span> <span class="PreProc">background</span>=dark
+
+<span class="Comment">&quot; syntax highlighting</span>
+<span class="Statement">syntax</span> <span class="Type">on</span>
+
+<span class="Comment">&quot; set color scheme</span>
+<span class="Statement">color</span> molokai
+
+<span class="Statement">let</span> <span class="Identifier">g:rehash256</span> <span class="Operator">=</span> <span class="Number">1</span>
+<span class="Statement">let</span> <span class="Identifier">g:molokai_original</span> <span class="Operator">=</span> <span class="Number">1</span>
+
+<span class="Comment">&quot; disable &lt;Leader&gt; timeout</span>
+<span class="Statement">set</span> <span class="PreProc">notimeout</span>
+<span class="Statement">set</span> <span class="PreProc">ttimeout</span>
+
+<span class="Comment">&quot; set ignorecase when use &lt;C-N&gt;</span>
+<span class="Statement">set</span> <span class="PreProc">ignorecase</span>
+<span class="Statement">set</span> <span class="PreProc">infercase</span>
+
+<span class="Comment">&quot; allow backgrounding buffers without writing them</span>
+<span class="Comment">&quot; and remember marks/undo for backgrounded buffers</span>
+<span class="Statement">set</span> <span class="PreProc">hidden</span>
+
+<span class="Comment">&quot; apply operations to all of selection including last char                                                                          </span>
+<span class="Statement">set</span> <span class="PreProc">selection</span>=inclusive
+
+<span class="Comment">&quot; for regular expressions turn magic on</span>
+<span class="Statement">set</span> <span class="PreProc">magic</span>
+
+<span class="Comment">&quot; keep more context when scrolling off the end of a buffer</span>
+<span class="Statement">set</span> <span class="PreProc">scrolloff</span>=3
+
+<span class="Comment">&quot; allow backspacing over everything in insert mode</span>
+<span class="Statement">set</span> <span class="PreProc">backspace</span>=indent<span class="Statement">,</span>eol<span class="Statement">,</span><span class="Statement">start</span>
+
+<span class="Comment">&quot; no line wrapping</span>
+<span class="Statement">set</span> <span class="PreProc">nowrap</span>
+
+<span class="Comment">&quot; line numbers</span>
+<span class="Statement">set</span> <span class="PreProc">number</span>
+
+<span class="Comment">&quot; when joining lines, don't insert two spaces after punctuation</span>
+<span class="Statement">set</span> <span class="PreProc">nojoinspaces</span>
+
+<span class="Comment">&quot; make searches case-sensitive only if they contain upper-case characters</span>
+<span class="Statement">set</span> <span class="PreProc">ignorecase</span>
+<span class="Statement">set</span> <span class="PreProc">smartcase</span>
+
+<span class="Comment">&quot; show search matches as the search pattern is typed</span>
+<span class="Statement">set</span> <span class="PreProc">incsearch</span>
+
+<span class="Comment">&quot; search-next wraps back to start of file</span>
+<span class="Statement">set</span> <span class="PreProc">wrapscan</span>
+
+<span class="Comment">&quot; set the indent</span>
+<span class="Statement">set</span> <span class="PreProc">smartindent</span>
+
+<span class="Comment">&quot; make tab completion for files/buffers act like bash</span>
+<span class="Statement">set</span> <span class="PreProc">wildmenu</span>
+
+<span class="Comment">&quot; display cursor co-ords at all times</span>
+<span class="Statement">set</span> <span class="PreProc">ruler</span>
+<span class="Statement">set</span> <span class="PreProc">cursorline</span>
+
+<span class="Comment">&quot; display number of selected chars, lines, or size of blocks.</span>
+<span class="Statement">set</span> <span class="PreProc">showcmd</span>
+
+<span class="Comment">&quot; do not auto add space when merge Chinese</span>
+<span class="Statement">set</span> <span class="PreProc">formatoptions</span>+=B
+
+<span class="Comment">&quot; enables filetype specific plugins</span>
+<span class="Statement">filetype</span> <span class="Type">indent</span> <span class="Type">plugin</span> <span class="Type">on</span>
+
+<span class="Comment">&quot; places to look for tags files: set tags=./tags,tags</span>
+
+<span class="Comment">&quot; recursively search file's parent dirs for tags file</span>
+<span class="Comment">&quot; set tags+=./tags;/</span>
+<span class="Comment">&quot; recursively search cwd's parent dirs for tags file</span>
+<span class="Statement">set</span> <span class="PreProc">tags</span>+=tags;/
+
+<span class="Comment">&quot; set the status line always show</span>
+<span class="Statement">set</span> <span class="PreProc">laststatus</span>=2
+
+<span class="Comment">&quot; map the some keys</span>
+<span class="Statement">imap</span> <span class="Delimiter">&lt;</span><span class="Special">C-l</span><span class="Delimiter">&gt;</span> <span class="Delimiter">&lt;</span><span class="Special">C-x</span><span class="Delimiter">&gt;&lt;</span><span class="Special">C-l</span><span class="Delimiter">&gt;</span>
+<span class="Statement">imap</span> <span class="Delimiter">&lt;</span><span class="Special">C-f</span><span class="Delimiter">&gt;</span> <span class="Delimiter">&lt;</span><span class="Special">C-x</span><span class="Delimiter">&gt;&lt;</span><span class="Special">C-f</span><span class="Delimiter">&gt;</span>
+
+<span class="Comment">&quot;&quot; =====================</span>
+
+<span class="Comment">&quot; use the pathogen</span>
+<span class="Statement">execute</span> <span class="Identifier">pathogen#infect</span><span class="Delimiter">()</span>
+
+<span class="Comment">&quot; set the vim multi cursor</span>
+<span class="Statement">let</span> <span class="Identifier">g:multi_cursor_start_key</span> <span class="Operator">=</span> <span class="String">'g&lt;C-n&gt;'</span>
+<span class="Statement">let</span> <span class="Identifier">g:multi_cursor_start_word_key</span> <span class="Operator">=</span> <span class="String">'&lt;C-n&gt;'</span>
+<span class="Statement">let</span> <span class="Identifier">g:multi_cursor_exit_from_insert_mode</span> <span class="Operator">=</span> <span class="Number">0</span>
+<span class="Statement">let</span> <span class="Identifier">g:multi_cursor_exit_from_visual_mode</span> <span class="Operator">=</span> <span class="Number">0</span>
+
+<span class="Comment">&quot; set the airline</span>
+<span class="Statement">let</span> <span class="Identifier">g:airline_powerline_fonts</span> <span class="Operator">=</span> <span class="Number">1</span>
+<span class="Statement">let</span> <span class="Identifier">g:airline_theme</span><span class="Operator">=</span><span class="String">'serene'</span>
+
+<span class="Comment">&quot; set the rainbow_parentheses</span>
+<span class="Statement">let</span> <span class="Identifier">g:rbpt_colorpairs</span> <span class="Operator">=</span> <span class="level16c">[</span>
+<span class="Special">            \</span> <span class="level15c">[</span><span class="String">'brown'</span>,       <span class="String">'RoyalBlue3'</span><span class="level15c">]</span>,
+<span class="Special">            \</span> <span class="level15c">[</span><span class="String">'Darkblue'</span>,    <span class="String">'SeaGreen3'</span><span class="level15c">]</span>,
+<span class="Special">            \</span> <span class="level15c">[</span><span class="String">'darkgray'</span>,    <span class="String">'DarkOrchid3'</span><span class="level15c">]</span>,
+<span class="Special">            \</span> <span class="level15c">[</span><span class="String">'darkgreen'</span>,   <span class="String">'firebrick3'</span><span class="level15c">]</span>,
+<span class="Special">            \</span> <span class="level15c">[</span><span class="String">'darkcyan'</span>,    <span class="String">'RoyalBlue3'</span><span class="level15c">]</span>,
+<span class="Special">            \</span> <span class="level15c">[</span><span class="String">'darkred'</span>,     <span class="String">'SeaGreen3'</span><span class="level15c">]</span>,
+<span class="Special">            \</span> <span class="level15c">[</span><span class="String">'darkmagenta'</span>, <span class="String">'DarkOrchid3'</span><span class="level15c">]</span>,
+<span class="Special">            \</span> <span class="level15c">[</span><span class="String">'brown'</span>,       <span class="String">'firebrick3'</span><span class="level15c">]</span>,
+<span class="Special">            \</span> <span class="level15c">[</span><span class="String">'gray'</span>,        <span class="String">'RoyalBlue3'</span><span class="level15c">]</span>,
+<span class="Special">            \</span> <span class="level15c">[</span><span class="String">'darkmagenta'</span>, <span class="String">'DarkOrchid3'</span><span class="level15c">]</span>,
+<span class="Special">            \</span> <span class="level15c">[</span><span class="String">'Darkblue'</span>,    <span class="String">'firebrick3'</span><span class="level15c">]</span>,
+<span class="Special">            \</span> <span class="level15c">[</span><span class="String">'darkgreen'</span>,   <span class="String">'RoyalBlue3'</span><span class="level15c">]</span>,
+<span class="Special">            \</span> <span class="level15c">[</span><span class="String">'darkcyan'</span>,    <span class="String">'SeaGreen3'</span><span class="level15c">]</span>,
+<span class="Special">            \</span> <span class="level15c">[</span><span class="String">'darkred'</span>,     <span class="String">'DarkOrchid3'</span><span class="level15c">]</span>,
+<span class="Special">            \</span> <span class="level15c">[</span><span class="String">'red'</span>,         <span class="String">'firebrick3'</span><span class="level15c">]</span>,
+<span class="Special">            \</span> <span class="level16c">]</span>
+
+<span class="Statement">let</span> <span class="Identifier">g:rbpt_max</span> <span class="Operator">=</span> <span class="Number">16</span>
+<span class="Statement">let</span> <span class="Identifier">g:rbpt_loadcmd_toggle</span> <span class="Operator">=</span> <span class="Number">0</span>
+<span class="Statement">au</span> <span class="Type">VimEnter</span> * RainbowParenthesesToggle
+<span class="Statement">au</span> <span class="Type">Syntax</span> * RainbowParenthesesLoadRound
+<span class="Statement">au</span> <span class="Type">Syntax</span> * RainbowParenthesesLoadSquare
+<span class="Statement">au</span> <span class="Type">Syntax</span> * RainbowParenthesesLoadBraces
+
+<span class="Comment">&quot; set the easymotion</span>
+<span class="Statement">let</span> <span class="Identifier">g:EasyMotion_smartcase</span> <span class="Operator">=</span> <span class="Number">1</span>
+<span class="Statement">let</span> <span class="Identifier">g:EasyMotion_startofline</span> <span class="Operator">=</span> <span class="Number">0</span>
+
+<span class="Statement">map</span>  / <span class="Delimiter">&lt;</span><span class="Special">Plug</span><span class="Delimiter">&gt;</span>(easymotion-sn)
+<span class="Statement">omap</span> / <span class="Delimiter">&lt;</span><span class="Special">Plug</span><span class="Delimiter">&gt;</span>(easymotion-tn)
+
+<span class="Comment">&quot; These `n` &amp; `N` mappings are options. You do not have to map `n` &amp; `N` to EasyMotion.</span>
+<span class="Comment">&quot; Without these mappings, `n` &amp; `N` works fine. (These mappings just provide</span>
+<span class="Comment">&quot; different highlight method and have some other features )</span>
+<span class="Statement">map</span>  n <span class="Delimiter">&lt;</span><span class="Special">Plug</span><span class="Delimiter">&gt;</span>(easymotion-next)
+<span class="Statement">map</span>  N <span class="Delimiter">&lt;</span><span class="Special">Plug</span><span class="Delimiter">&gt;</span>(easymotion-prev)
+
+<span class="Comment">&quot; set pymode</span>
+<span class="Statement">let</span> <span class="Identifier">g:pymode_rope</span> <span class="Operator">=</span> <span class="Number">0</span>
+<span class="Statement">let</span> <span class="Identifier">g:pymode_python</span> <span class="Operator">=</span> <span class="String">'python3'</span>
+<span class="Statement">let</span> <span class="Identifier">g:pymode_breakpoint_cmd</span> <span class="Operator">=</span> <span class="String">&quot;__import__('bpdb').set_trace()&quot;</span>
+
+<span class="Comment">&quot; ##### auto fcitx  ###########</span>
+<span class="Statement">let</span> <span class="Identifier">g:input_toggle</span> <span class="Operator">=</span> <span class="Number">1</span>
+<span class="Statement">function</span>! Fcitx2en<span class="Delimiter">()</span>
+    <span class="Statement">let</span> <span class="Identifier">s:input_status</span> <span class="Operator">=</span> <span class="Function">system</span><span class="Delimiter">(</span><span class="String">&quot;fcitx-remote&quot;</span><span class="Delimiter">)</span>
+    <span class="Statement">if</span> <span class="Identifier">s:input_status</span> <span class="Operator">==</span> <span class="Number">2</span>
+        <span class="Statement">let</span> <span class="Identifier">g:input_toggle</span> <span class="Operator">=</span> <span class="Number">1</span>
+        <span class="Statement">let</span> <span class="Identifier">l:a</span> <span class="Operator">=</span> <span class="Function">system</span><span class="Delimiter">(</span><span class="String">&quot;fcitx-remote -c&quot;</span><span class="Delimiter">)</span>
+    <span class="Statement">endif</span>
+<span class="Statement">endfunction</span>
+
+<span class="Statement">set</span> <span class="PreProc">ttimeoutlen</span>=150
+
+<span class="Comment">&quot; exit the insert mode</span>
+<span class="Statement">autocmd</span> <span class="Type">InsertLeave</span> * <span class="Statement">call</span> <span class="Normal">Fcitx2en</span><span class="level16c">()</span>
+<span class="Comment">&quot; ##### auto fcitx end ######</span>
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->
