@@ -3,9 +3,9 @@
 // @namespace    https://stackoverflow.com/users/5299236/kevin-guan
 // @author       Kevin
 // @description  Preview every `cv-pls` requests in SOCVR; the code is based on stackapps.com/q/6737
-// @include      http://chat.stackoverflow.com/rooms/41570/so-close-vote-reviewers
+// @include      /https?:\/\/chat\.stackoverflow\.com\/rooms\/41570.*/
 // @updateURL    https://gist.github.com/K-Guan/e86542c256e72910e7bd0be208a49ba3
-// @version      2.5
+// @version      2.6
 // @grant        GM_getValue
 // @grant        GM_setValue
 // ==/UserScript==
@@ -74,8 +74,8 @@ function onMessage(user, msg) {
 
 
 function loadPreview(id) {
-    // var url = "http://api.stackexchange.com/2.2/questions/" + id + "?site=stackoverflow&filter=!)Q2B(_XXTIbbJYp7Ko8L)eSx";
-    var url = "http://api.stackexchange.com/2.2/questions/" + id + "?site=stackoverflow&filter=!)Q2B(_XXTIbbJYp7Ko8L)eSx&key=4JvEOlgm0aIgrcmo2hsbng((";
+    // var url = "https://api.stackexchange.com/2.2/questions/" + id + "?site=stackoverflow&filter=!)Q2B(_XXTIbbJYp7Ko8L)eSx";
+    var url = "https://api.stackexchange.com/2.2/questions/" + id + "?site=stackoverflow&filter=!)Q2B(_XXTIbbJYp7Ko8L)eSx&key=4JvEOlgm0aIgrcmo2hsbng((";
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url);
     xhr.onload = showPreview;
