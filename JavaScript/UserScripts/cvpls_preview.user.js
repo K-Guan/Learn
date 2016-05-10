@@ -5,7 +5,7 @@
 // @description  Preview every `cv-pls` requests in SOCVR; the code is based on stackapps.com/q/6737
 // @include      http://chat.stackoverflow.com/rooms/41570/so-close-vote-reviewers
 // @updateURL    https://gist.github.com/K-Guan/e86542c256e72910e7bd0be208a49ba3
-// @version      2.3
+// @version      2.5
 // @grant        GM_getValue
 // @grant        GM_setValue
 // ==/UserScript==
@@ -55,11 +55,14 @@ function processMessageNode(node) {
 }
 
 function onMessage(user, msg) {
-    if(msg.innerHTML.indexOf('stackoverflow.com/questions/tagged/cv-pls') > 0 && msg.innerHTML.indexOf('<a href="http://stackoverflow.com') > 0) {
-        var post = msg.getElementsByTagName("a")[1].href;
-        var id = post.split('/')[4];
+    if(msg.innerHTML.indexOf('stackoverflow.com/questions/tagged/cv-pls') > -1 && /<a href="https?:\/\/stackoverflow\.com\/q(uestion)?\/\d+.*"/.test(msg.innerHTML)) {
+        var post = Array.prototype.slice.call(msg.getElementsByTagName("a")).filter(function(link) {
+            return /^https?:\/\/stackoverflow\.com\/q(uestion)?\/\d+.*/.test(link.href);
+        })[0].href;
 
+        var id = post.split('/')[4];
         var tag = '<div id="cvpls' + id + '" class="onebox ob-post" style="overflow-y:auto; max-height:150px; margin-bottom:2em"></div>';
+
         if(document.getElementById('cvpls' + id) === null) {
             msg.innerHTML += tag;
         }
@@ -67,6 +70,8 @@ function onMessage(user, msg) {
         loadPreview(id);
     }
 }
+
+
 
 function loadPreview(id) {
     // var url = "http://api.stackexchange.com/2.2/questions/" + id + "?site=stackoverflow&filter=!)Q2B(_XXTIbbJYp7Ko8L)eSx";
