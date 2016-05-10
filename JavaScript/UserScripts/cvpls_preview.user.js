@@ -55,9 +55,9 @@ function processMessageNode(node) {
 }
 
 function onMessage(user, msg) {
-    if(msg.innerHTML.indexOf('stackoverflow.com/questions/tagged/cv-pls') > -1 && /<a href="https?:\/\/stackoverflow\.com\/q(uestion)?\/\d+.*"/.test(msg.innerHTML)) {
+    if(msg.innerHTML.indexOf('stackoverflow.com/questions/tagged/cv-pls') > -1 && /<a href="https?:\/\/stackoverflow\.com\/q(uestions)?\/\d+.*"/.test(msg.innerHTML)) {
         var post = Array.prototype.slice.call(msg.getElementsByTagName("a")).filter(function(link) {
-            return /^https?:\/\/stackoverflow\.com\/q(uestion)?\/\d+.*/.test(link.href);
+            return /^https?:\/\/stackoverflow\.com\/q(uestions)?\/\d+.*/.test(link.href);
         })[0].href;
 
         var id = post.split('/')[4];
