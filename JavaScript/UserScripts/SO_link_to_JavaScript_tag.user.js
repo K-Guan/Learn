@@ -4,7 +4,7 @@
 // @author       Kevin
 // @description  Change the link of Stack Overflow main logo.
 // @version      0.2
-// @include      /^https?:\/\/\w*.?stackoverflow.com\/.*/
+// @include      /^https?:\/\/w*\.?stackoverflow.com\/.*/
 // @require      https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser.min.js
 // ==/UserScript==
