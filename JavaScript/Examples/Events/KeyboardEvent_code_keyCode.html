@@ -1,6 +1,15 @@
+<!DOCTYPE html>
 <html>
     <head>
+        <title>JavaScript basic example of KeyboardEvent.code and KeyboardEvent.keyCode</title>
+    </head>
+    <body>
+        <div id="keys"></div>
+
         <script>
+console.log('This example shows how "KeyboardEvent.code and KeyboardEvent.keyCode" works.\n' +
+            'See more info at MDN: https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault');
+
 document.addEventListener('keydown', event => {
     document.getElementById('keys').insertAdjacentHTML('beforeend', 
             `<div style="font-size: 20px">
@@ -9,8 +18,5 @@ document.addEventListener('keydown', event => {
             </div>`)
 });
         </script>
-    </head>
-    <body>
-        <div id="keys"></div>
     </body>
 </html>
