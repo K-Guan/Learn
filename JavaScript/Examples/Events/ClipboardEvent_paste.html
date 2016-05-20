@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <script>
+document.addEventListener('paste', event => {
+    // get the HTML version of pasted text, and put it into `output` div
+    document.getElementById('output').innerHTML = event.clipboardData.getData('text/html');
+});
+        </script>
+    </head>
+    <body>
+        <div id="output">Just paste something here!</div>
+    </body>
+</html>
