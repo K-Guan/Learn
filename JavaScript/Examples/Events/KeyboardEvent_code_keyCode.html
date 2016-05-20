@@ -15,7 +15,9 @@ document.addEventListener('keydown', event => {
             `<div style="font-size: 20px">
             <code style="color: green">${event.code}</code>
             <code style="color: blue">${event.keyCode}</code>
-            </div>`)
+            </div>`);
+
+    window.scrollTo(0, document.body.scrollHeight);  // scroll to bottom automatically
 });
         </script>
     </body>
