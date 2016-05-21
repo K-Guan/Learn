@@ -2,21 +2,23 @@
 <html>
     <head>
         <title>JavaScript basic example of ClipboardEvent.paste</title>
+
+        <script>
+document.addEventListener("DOMContentLoaded", () => {
+    console.log('This example shows how "ClipboardEvent.paste" works.\n' +
+                'See more info at MDN: https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault');
+    
+    document.addEventListener('paste', event => {
+        // get the HTML version of pasted text, and put it into `output` div
+        document.getElementById('output').innerHTML = event.clipboardData.getData('text/html');
+    
+        // get the plain version of pasted text, and log it
+        console.log(event.clipboardData.getData('text/plain'));
+    });
+});
+        </script>
     </head>
     <body>
         <div id="output">Just paste something here!</div>
-
-        <script>
-console.log('This example shows how "ClipboardEvent.paste" works.\n' +
-            'See more info at MDN: https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault');
-
-document.addEventListener('paste', event => {
-    // get the HTML version of pasted text, and put it into `output` div
-    document.getElementById('output').innerHTML = event.clipboardData.getData('text/html');
-
-    // get the plain version of pasted text, and log it
-    console.log(event.clipboardData.getData('text/plain'));
-});
-        </script>
     </body>
 </html>

@@ -2,20 +2,22 @@
 <html>
     <head>
         <title>JavaScript basic example of ClipboardEvent.copy</title>
+
+        <script>
+document.addEventListener("DOMContentLoaded", () => {
+    console.log('This example shows how "ClipboardEvent.copy" works.\n' +
+                'See more info at MDN: https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault');
+
+    document.addEventListener('copy', event => {
+        event.clipboardData.setData('text/plain', "You can't copy anything from this page!");  // setting the data of plain text
+        event.clipboardData.setData('text/html', "<b>You can't copy anything from this page!</b>");  // setting the data of html text
+        event.preventDefault();  // enable the settings
+    });
+});
+        </script>
     </head>
     <body>
         <p>Copy this line and try paste it here:</p>
         <input size="25"></input>
-
-        <script>
-console.log('This example shows how "ClipboardEvent.copy" works.\n' +
-            'See more info at MDN: https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault');
-
-document.addEventListener('copy', event => {
-    event.clipboardData.setData('text/plain', "You can't copy anything from this page!");  // setting the data of plain text
-    event.clipboardData.setData('text/html', "<b>You can't copy anything from this page!</b>");  // setting the data of html text
-    event.preventDefault();  // enable the settings
-});
-        </script>
     </body>
 </html>
