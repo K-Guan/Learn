@@ -107,7 +107,7 @@ const keycodeMap = [
     'Numpad9',  // 105
     'NumpadMultiply',  // 106
     'NumpadAdd',  // 107
-    '',  // 108
+    'NumpadSeparator',  // 108
     'NumpadSubtract',  // 109
     'NumpadDecimal',  // 110
     'NumpadDivide',  // 111
