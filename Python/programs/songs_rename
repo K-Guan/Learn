@@ -3,4 +3,4 @@ import re
 import os
 
 for i in os.listdir():
-    os.rename(i, re.sub('^\d+\.? ', '', i))
+    os.rename(i, re.sub('^\d+\.? ?', '', i))
